@@ -5,9 +5,6 @@
 <meta charset="UTF-8">
 </head>
 <body>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0"></script>
-<script>
 
   function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
     console.log('statusChangeCallback');
@@ -63,7 +60,8 @@
 
 </script>
   
-  <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true" data-width=""></div>
+  <fb:login-button scope="public_profile,email,instagram_basic,pages_show_list" onlogin="checkLoginState();">
+</fb:login-button>
 
 <div id="status">
 </div>
